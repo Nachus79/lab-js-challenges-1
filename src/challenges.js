@@ -1,4 +1,6 @@
-// Iteration 1 | Count Repetition
+/* Iteration 1 | Count Repetition
+  Declare a function named howManyTimes that will take in an array of words as the first argument and a word to search for as the second argument. The function should return the number of times the word appears in the array.
+*/
 const repeatedWords = [
   "machine",
   "matter",
@@ -13,26 +15,90 @@ const repeatedWords = [
   "matter"
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsArr, word) {
+
+  let counterWords = 0; //Creo una variable para almancenar las palabras repetidas. 
+
+    if (wordsArr.length === 0){ //Hago un if para que devuelva un cero si el array está vacío.
+      return 0; 
+
+    }
+
+    for (let i = 0; i < wordsArr.length ; i++){ //Hago un for para recorrer el array.
+
+      let wordsOfTheArray = wordsArr[i]; //Almaceno cada elemento del array en esta variable (no hace falta realmente).
+
+      if (wordsOfTheArray === word) { 
+        counterWords++; //Aquí describimos la condición: si la palabra que pasemos como segundo argumento está en el array aumentamos el número de veces en la variable counterWords. 
+
+      }
+
+    }
+    return counterWords; 
+
+}
+
+howManyTimes (repeatedWords, matter);
+
+
+/* Iteration 2 | Number Sequence: 
+  Declare a function named createSequence. The function should take one argument: a number (n). The function should return an array of numbers in the range from 0 to n.
+*/
+
+function createSequence(n) {
+
+  const arrayOfNumbers = []; //Creo un array vacío para ir almacenando los números. 
+
+  if (n === 0) { //Si el número introducido es cero, devuelve un array vacío. 
+
+    return []; //Devuelve un array vacío.
+
+  }
+
+  for (let i = 0; i <= n; i++) //Recorremos el array.
+    {
+      arrayOfNumbers.push(i); //Añadimos los número al array vacío del principio con push para hacerlo ordenado. 
+    }
+  
+    return arrayOfNumbers; 
+  }
+
+createSequence(7); 
 
 
 
 
-// Iteration 2 | Number Sequence
-function createSequence() {}
+/* Iteration 3 | Multiply for Each: 
+
+  Implement the function multiplyBy that takes two arguments: an array of numbers and a number (multiplier). It should return a new array containing each number of the first array multiplied by the multiplier.
+
+  Important: You must use the forEach() method in the function to iterate over the array. If you need a refresher on the forEach() method, check today's lesson or the following MDN page.
+
+  You can use the following array to test your solution: */
 
 
-
-
-// Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyBy(arrNumbers, multiplier) {
 
+  let arrayNumbersMultiplied = [];
 
+  for (let i = 0; i < arrNumbers.length; i++){
+
+    let numbersOfTheArray = arrNumbers[i];
+    
+    arrayNumbersMultiplied.push(numbersOfTheArray * multiplier); 
+
+  }
+
+  return arrayNumbersMultiplied; 
+}
+
+multiplyBy(numbers, 3);
 
 
 // Iteration 4 | Filter Out
+
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
