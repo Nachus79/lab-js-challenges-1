@@ -55,8 +55,8 @@ function createSequence(n) {
 
   }
 
-  for (let i = 0; i <= n; i++) //Recorremos el array.
-    {
+  for (let i = 0; i <= n; i++){ //Recorremos el array.
+    
       arrayOfNumbers.push(i); //Añadimos los número al array vacío del principio con push para hacerlo ordenado. 
     }
   
@@ -97,17 +97,59 @@ function multiplyBy(arrNumbers, multiplier) {
 multiplyBy(numbers, 3);
 
 
-// Iteration 4 | Filter Out
+/* Iteration 4 | Filter Out: 
+
+  Declare a function filterOut. The function should take two arguments: an array of strings (original), and an array of strings to filter out.
+
+  The function should return a new array that only includes the strings from the original array that are not present in the second array. In other words, you should remove all the strings listed in the second array.
+
+*/
 
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(arrStrings1, arrStrings2 ) {
+
+  let filteredArray = []; //Declaro un array vacío para contener los "strings" filtrados.
+
+  if (arrStrings1.length === 0){ //Primer filtro. Si el primer array está vacío devuelve "null".
+
+    return null; 
+
+  }
+
+  if (arrStrings2.length === 0){ //Segundo filtro. Si el array que sirve de filtro está vacío devuelve el primero sin tocar (si no hay filtro, no se filtra).
+    
+    return arrStrings1; 
+    
+  }
+
+  for (let i = 0; i <arrStrings1.length; i++){ //Con FOR recorro el array. 
+
+    let counterWords = arrStrings1[i];  //El contenido del array lo almaceno en una nueva variable (no hace falta).
+    
+    if (arrStrings2.indexOf(counterWords) === -1){ /*En la condición introduzco un indexOF de tal manera que se busca en el array de filtrado la presencia de elementos del array a filtrar. Al poner "=== -1" le quita coincidencias entre uno y otro. Esto es, quita los elementos que no coinciden. */
+      
+      filteredArray.push(counterWords); /* Aquí almacenamos con push (al final), los elementos fitrados en el nuevo array con un orden parecido al del array original: el primer "fish" primero, luego "bird" y finalmente el segundo "fish". Si empleara .unshift() lo habría hecho en orden inverso, aunque aquí no se notaría la diferencia. */ 
+    }
+    
+  }
+
+return filteredArray;  
+}
+
+console.log(filterOut(original, toRemove));
+ 
 
 
+/* Iteration 5 | Unique Arrays
 
+  Take the following array, remove the duplicates, and return a new array. You are more than likely going to want to check out the Array methods indexOf and includes.
 
-// Iteration 5 | Unique Arrays
+  Do this in the form of a function uniquifyArray that receives an array of words as an argument.
+
+*/
+
 const duplicateWords = [
   "crab",
   "poison",
@@ -122,7 +164,21 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(words) {
+
+  let newArrayFiltered = []; 
+
+  if (words.length === 0){
+
+    return null; 
+
+  }
+
+
+
+
+
+}
 
 
 
