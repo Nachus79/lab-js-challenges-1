@@ -17,7 +17,7 @@ const repeatedWords = [
 
 function howManyTimes(wordsArr, word) {
 
-  let counterWords = 0; //Creo una variable para almancenar las palabras repetidas. 
+  let coords = 0; //Creo una variable para almancenar las palabras repetidas. 
 
     if (wordsArr.length === 0){ //Hago un if para que devuelva un cero si el array está vacío.
       return 0; 
@@ -128,7 +128,7 @@ function filterOut(arrStrings1, arrStrings2 ) {
 
     let counterWords = arrStrings1[i];  //El contenido del array lo almaceno en una nueva variable (no hace falta).
     
-    if (arrStrings2.indexOf(counterWords) === -1){ /*En la condición introduzco un indexOF de tal manera que se busca en el array de filtrado la presencia de elementos del array a filtrar. Al poner "=== -1" le quita coincidencias entre uno y otro. Esto es, quita los elementos que no coinciden. */
+    if (!arrStrings2.includes(counterWords)){ /*En la condición introduzco un indexOF de tal manera que se busca en el array de filtrado la presencia de elementos del array a filtrar. Al poner "=== -1" le quita coincidencias entre uno y otro. Esto es, quita los elementos que no coinciden. */
       
       filteredArray.push(counterWords); /* Aquí almacenamos con push (al final), los elementos fitrados en el nuevo array con un orden parecido al del array original: el primer "fish" primero, luego "bird" y finalmente el segundo "fish". Si empleara .unshift() lo habría hecho en orden inverso, aunque aquí no se notaría la diferencia. */ 
     }
@@ -174,9 +174,11 @@ function uniquifyArray(words) {
 
   }
 
+  for (let i = 0; i < words.length; i++){
 
 
 
+  }
 
 }
 
