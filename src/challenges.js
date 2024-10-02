@@ -168,17 +168,13 @@ function uniquifyArray(words) {
 
   let newArrayFiltered = []; 
 
-  if (words.length === 0){
+  if (words.length === 0){ //Creo el filtro por si el array está vacío.
 
     return null; 
 
   }
 
-  for (let i = 0; i < words.length; i++){
 
-
-
-  }
 
 }
 
