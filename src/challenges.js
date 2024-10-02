@@ -17,7 +17,7 @@ const repeatedWords = [
 
 function howManyTimes(wordsArr, word) {
 
-  let coords = 0; //Creo una variable para almancenar las palabras repetidas. 
+  let counter= 0; //Creo una variable para almancenar las palabras repetidas. 
 
     if (wordsArr.length === 0){ //Hago un if para que devuelva un cero si el array está vacío.
       return 0; 
@@ -29,16 +29,16 @@ function howManyTimes(wordsArr, word) {
       let wordsOfTheArray = wordsArr[i]; //Almaceno cada elemento del array en esta variable (no hace falta realmente).
 
       if (wordsOfTheArray === word) { 
-        counterWords++; //Aquí describimos la condición: si la palabra que pasemos como segundo argumento está en el array aumentamos el número de veces en la variable counterWords. 
+        counter++; //Aquí describimos la condición: si la palabra que pasemos como segundo argumento está en el array aumentamos el número de veces en la variable counterWords. 
 
       }
 
     }
-    return counterWords; 
+    return counter; 
 
 }
 
-howManyTimes (repeatedWords, matter);
+howManyTimes (repeatedWords, "matter");
 
 
 /* Iteration 2 | Number Sequence: 
